@@ -17,7 +17,7 @@ viewer._cesiumWidget._creditContainer.parentNode.removeChild(
     viewer._cesiumWidget._creditContainer);
 
 var durakModel = new Cesium.ModelGraphics({
-	uri: "C:/Users/Selyan Worker/Desktop/models/durak.glb",
+	uri: "durak.glb",
 	minimumPixelSize: 64,
 	maximumScale: 2000000
 });
