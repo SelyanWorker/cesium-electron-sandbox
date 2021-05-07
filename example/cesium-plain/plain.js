@@ -120,3 +120,4 @@ entity.position.setInterpolationOptions({
         });
 		
 viewer.trackedEntity = entity;
+

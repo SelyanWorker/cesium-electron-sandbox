@@ -18,7 +18,7 @@ function createFfmpeg(options_)
 
 	// output param
 	args.push('-map', '0', 
-			  '-segment_time', '00:00:05',
+			  '-segment_time', '00:01:00',
 			  '-f', 'segment', 
 			  '-reset_timestamps', '1',
 			  'output%03d.mp4');
@@ -56,7 +56,7 @@ function offscreenFileStream(ffmpegPath, htmlPage, winWidth, winHeight, chunkSiz
 	const performanceNow = require("performance-now")
 
 	let ffmpeg = createFfmpeg({ffmpeg: ffmpegPath,
-							   fps: 60});
+							   fps: 24});
 
 	app.whenReady().then(() => {
 		let win = new BrowserWindow({ 

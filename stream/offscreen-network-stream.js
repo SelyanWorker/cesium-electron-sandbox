@@ -69,7 +69,7 @@ function createFfmpeg(options_)
 
 function offscreenNetworkStream(ffmpegPath, htmlPage, winWidth, winHeight)
 {
-	const { app, BrowserWindow } = require('electron')
+	const { app, BrowserWindow } = require("electron")
 	const performanceNow = require("performance-now")
 	
 	let ffmpeg = createFfmpeg({ffmpeg: ffmpegPath,
