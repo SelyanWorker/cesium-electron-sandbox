@@ -23,24 +23,8 @@ camera.setView({
   destination: Cesium.Cartographic.toCartesian(camCartPos)
 });
 
-/*const TelemetryReceiver = require('./../../telemetry_receiver/telemetry-receiver')
-let tr = new TelemetryReceiver()
-tr.setPositionCallback((position) =>
-{
-  let cartogrPos = new Cesium.Cartographic(position.longitude, position.latitude, position.height)
-  camera.setView({
-    direction: Cesium.Cartographic.toCartesian(cartogrPos)
-  });
-})
-tr.setOrientationCallback((orientation) =>
-{
-  camera.setView({
-    orientation: orientation
-  });
-})*/
 
 const { ipcRenderer } = require('electron');
-
 ipcRenderer.on('updatePosition', (event, arg) =>
 {
   let cartPos = new Cesium.Cartographic(arg.longitude, arg.latitude, arg.height)
